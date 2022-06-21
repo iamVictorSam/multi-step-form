@@ -1,38 +1,86 @@
 .App {
-  text-align: center;
+  background: rgb(41, 66, 72);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: montserrat, arial, verdana;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 1rem;
+
+}
+
+h1{
+  flex: 20%;
+  display: grid;
+  place-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* PROGRESS BAR */
+.progress-bar {
+  width: 400px;
+  height: 15px;
+  background-color: white;
+  margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.progress-bar div {
+  width: 25%;
+  height: 100%;
+  background-color: rgb(98, 0, 255);
+}
+
+
+
+input {
+  border: 2px solid rgb(98, 0, 255);
+  border-radius: 5px;
+  height: 25px;
+  display: block;
+  width: 20rem;
+  margin-bottom: 1rem;
+
+}
+
+input:focus {
+  border: 2px solid rgb(98, 0, 255);
+}
+
+button {
+  height: 2rem;
+  width: 8rem;
+  
+}
+
+textarea {
+  width: 20rem;
 }
