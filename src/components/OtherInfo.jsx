@@ -1,15 +1,15 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 
-const OtherInfo = ({ formData, setFormData, x }) => {
+const OtherInfo = ({ formData, setFormData, page, setPage, x, setX }) => {
   return (
     <motion.div
       initial={{ x: x }}
       transition={{ duration: 1 }}
       animate={{ x: 0 }}
-      className="form-container"
+      className="card"
     >
+      <div className="step-title">Other Info</div>
       <input
         type="text"
         placeholder="Highest Qualification"
@@ -32,6 +32,23 @@ const OtherInfo = ({ formData, setFormData, x }) => {
         value={formData.about}
         onChange={(e) => setFormData({ ...formData, about: e.target.value })}
       />
+      <br />
+      <button
+        onClick={() => {
+          alert("You've successfully submitted this form");
+        }}
+      >
+        Submit
+      </button>
+      <br />
+      <button
+        onClick={() => {
+          setPage(page - 1);
+          setX(-1000);
+        }}
+      >
+        Previous
+      </button>
     </motion.div>
   );
 };
